@@ -25,12 +25,11 @@ class  AppBodyState extends State AppBody> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: pages[currentIndex]
+      body:Center( pages[currentIndex])
        bottomNavigationBar: BottomNavigationBar(
        onTap: onTapMethod,
        currentIndex: currentIndex, 
-        
-        items: [
+         items: [
           BottomNavigationBarItem(
             icon: Icon(Iconsax.home_1_outline),
             label: "Home",
@@ -40,11 +39,11 @@ class  AppBodyState extends State AppBody> {
            
           BottomNavigationBarItem(
             icon: Icon(Iconsax.home_1_outline),
-            label: "Home",
+            label: "profile",
 
           
 
-        ]),
+        ],),
     );
   }
 }
