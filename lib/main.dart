@@ -1,7 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
@@ -13,23 +12,25 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-     home: Scaffold(
-      appBar:AppBar(
-        title:Text("Advanced UI-Lab06"),
-        backgroundColor: Colors.blue,
-        centerTitle: true,
-
+      home: Scaffold(
+        drawer: Drawer(
+          child: Text("Menu01"),
+        ),
+        appBar: AppBar(
+          title: Text("Advanced UI-Lab06"),
+          backgroundColor: Colors.blue,
+          centerTitle: true,
+        ),
+        body: Column(children: [
+          CachedNetworkImage(
+            imageUrl:
+                "https://img.freepik.com/premium-photo/augmented-intelligence-combines-human-expertise-with-artificial-intelligence_988095-17527.jpg?w=360",
+            placeholder: (context, url) => CircularProgressIndicator(),
+            errorWidget: (context, url, error) => Icon(Icons.error),
+          )
+        ]),
       ),
-      body: Column(
-       children: [
-        CachedNetworkImage(
-        imageUrl: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.brainyquote.com%2Ftopics%2Fai-quotes&psig=AOvVaw1yjAN1oVbLD17cfYIthOIp&ust=1740375907172000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCNCUstGL2YsDFQAAAAAdAAAAABAE",
-        placeholder: (context, url) => CircularProgressIndicator(),
-        errorWidget: (context, url, error) => Icon(Icons.error),
-     )
-       ] 
-      )
-     )
+    );
   }
 }
 
