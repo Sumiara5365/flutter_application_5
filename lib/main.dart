@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       body: Column(
        children: [
         CachedNetworkImage(
-        imageUrl: "http://via.placeholder.com/350x150",
+        imageUrl: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.brainyquote.com%2Ftopics%2Fai-quotes&psig=AOvVaw1yjAN1oVbLD17cfYIthOIp&ust=1740375907172000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCNCUstGL2YsDFQAAAAAdAAAAABAE",
         placeholder: (context, url) => CircularProgressIndicator(),
         errorWidget: (context, url, error) => Icon(Icons.error),
      )
