@@ -1,4 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter_application_5/appbody.dart';
+import 'package:iconsax_plus/iconsax_plus.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,46 +15,38 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        drawer: Drawer(
-          child: ListView(children: [
-            Container(
-              height: 70,
-              child: DrawerHeader(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(Icons.tiktok),
-                    ElevatedButton(
-                      onPressed: () {},
-                      child: Icon(Icons.close),
-                    )
-                  ],
+          drawer: Drawer(
+            child: ListView(children: [
+              Container(
+                height: 70,
+                child: DrawerHeader(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Icon(Icons.tiktok),
+                      ElevatedButton(
+                        onPressed: () {},
+                        child: Icon(Icons.close),
+                      )
+                    ],
+                  ),
                 ),
               ),
-            ),
-            ListTile(
-              leading: Icon(Icons.home),
-              title: Text("Home"),
-              trailing: Text("Trail"),
-              onTap: () {},
-            )
-          ]),
-        ),
-        endDrawer: Drawer(),
-        appBar: AppBar(
-          title: Text("Advanced UI-Lab06"),
-          backgroundColor: Colors.blue,
-          centerTitle: true,
-        ),
-        body: Column(children: [
-          CachedNetworkImage(
-            imageUrl:
-                "https://img.freepik.com/premium-photo/augmented-intelligence-combines-human-expertise-with-artificial-intelligence_988095-17527.jpg?w=360",
-            placeholder: (context, url) => CircularProgressIndicator(),
-            errorWidget: (context, url, error) => Icon(Icons.error),
-          )
-        ]),
-      ),
+              ListTile(
+                leading: Icon(Icons.home),
+                title: Text("Home"),
+                trailing: Text("Trail"),
+                onTap: () {},
+              )
+            ]),
+          ),
+          endDrawer: Drawer(),
+          appBar: AppBar(
+            title: Text("Advanced UI-Lab06"),
+            backgroundColor: Colors.blue,
+            centerTitle: true,
+          ),
+          body: AppBody()),
     );
   }
 }
