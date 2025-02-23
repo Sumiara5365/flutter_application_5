@@ -33,6 +33,7 @@ class MyApp extends StatelessWidget {
             ListTile(
               leading: Icon(Icons.home),
               title: Text("Home"),
+              trailing: Text ("Trail"),
               onTap: () {},
             )
           ]),
